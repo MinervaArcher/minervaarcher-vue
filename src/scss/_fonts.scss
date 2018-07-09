@@ -1,0 +1,58 @@
+$font_dir: '~@/fonts/';
+
+/* TODO clean this up after deciding on final typefaces */
+
+@font-face {
+  font-family: 'Arvo';
+  src: url($font_dir + 'Arvo-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Bitter Bold';
+  src: url($font_dir + 'Bitter-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Comfortaa Bold';
+  src: url($font_dir + 'Comfortaa-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url($font_dir + 'Karla-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Karla Bold';
+  src: url($font_dir + 'Karla-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url($font_dir +  'Muli-SemiBold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url($font_dir + 'OpenSans-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url($font_dir + 'OpenSans-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url($font_dir + 'OpenSans-Light.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url($font_dir + 'Roboto-Regular.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url($font_dir + 'Rubik-Regular.ttf') format('opentype');
+}

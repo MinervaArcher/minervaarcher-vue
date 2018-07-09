@@ -1,21 +1,20 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+
 import About from './views/About.vue';
+import Portfolio from './views/Portfolio.vue';
+import PortfolioBotm from './views/PortfolioBotm.vue';
+import PortfolioShoSeries from './views/PortfolioShoSeries.vue';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About,
-    },
+    { path: '/', component: Portfolio },
+    { path: '/about', component: About },
+    { path: '/portfolio', component: Portfolio },
+    { path: '/portfolio/botm', component: PortfolioBotm },
+    { path: '/portfolio/showtime-series', component: PortfolioShoSeries },
   ],
 });
