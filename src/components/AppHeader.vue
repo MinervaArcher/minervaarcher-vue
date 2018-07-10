@@ -15,8 +15,9 @@
       @keyup.esc="menuEscape"
       aria-haspopup="true"
       aria-controls="mobile-menu"
+      aria-label="menu"
       >
-      <img :src="(isMenuOpen ? closeIcon : menuIcon)" />
+      <img :src="(isMenuOpen ? closeIcon : menuIcon)" alt="" />
       </button>
     </div>
     <div
@@ -84,35 +85,35 @@ export default {
           active: false,
         },
       ],
-      isMenuOpen: false
+      isMenuOpen: false,
     };
   },
   // Note: All methods are for WAI-ARIA compliance with menu behavior
   // (see https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-links.html)
   methods: {
-    focusItem (whichItem = 'first') {
+    focusItem(whichItem = 'first') {
       if (whichItem === 'first') {
         this.$refs.menuitem[0].$el.focus();
       } else {
         this.$refs.menuitem[this.$refs.menuitem.length - 1].$el.focus();
       }
     },
-    menuCloseAndFocus () {
+    menuCloseAndFocus() {
       this.isMenuOpen = false;
       this.$refs.menubutton.focus();
     },
-    menuEscape () {
+    menuEscape() {
       this.isMenuOpen = false;
       this.$refs.menubutton.focus();
     },
-    menuOpenAndFocus (which = 'first') {
+    menuOpenAndFocus(which = 'first') {
       this.isMenuOpen = true;
       this.focusItem(which);
     },
     menuToggleState() {
       this.isMenuOpen = !this.isMenuOpen;
     },
-    navDown (evt) {
+    navDown(evt) {
       const next = evt.currentTarget.nextSibling;
       if (next) {
         next.focus();
@@ -120,7 +121,7 @@ export default {
         this.$refs.menuitem[0].$el.focus();
       }
     },
-    navUp (evt) {
+    navUp(evt) {
       const prev = evt.currentTarget.previousSibling;
       if (prev) {
         prev.focus();
@@ -128,13 +129,13 @@ export default {
         this.$refs.menuitem[this.$refs.menuitem.length - 1].$el.focus();
       }
     },
-    onItemKeyup (evt) {
+    onItemKeyup(evt) {
       const key = evt.key.toLowerCase();
 
       // If a letter key is pressed, find the first menu item
       // that begins with that letter and focus on that item
       if (/^[a-z]{1}$/.test(key)) {
-        const item = this.$refs.menuitem.find((vEl) => vEl.$el.innerText.toLowerCase().slice(0,1) === key);
+        const item = this.$refs.menuitem.find(vEl => vEl.$el.innerText.toLowerCase().slice(0, 1) === key);
         if (item) item.$el.focus();
       } else {
         switch (key) {
@@ -163,8 +164,8 @@ export default {
             break;
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
