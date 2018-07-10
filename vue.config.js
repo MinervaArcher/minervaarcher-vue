@@ -6,12 +6,10 @@ module.exports = {
       .test(/\.ttf$/)
       .use('url-loader')
       .loader('url-loader')
-      .tap(() => {
-        return {
-          limit: 10000,
-          name: 'fonts/[name].[hash:7].[ext]',
-        };
-      })
+      .tap(() => ({
+        limit: 10000,
+        name: 'fonts/[name].[hash:7].[ext]',
+      }))
       .end();
   },
 };
