@@ -5,6 +5,7 @@ After building my own site from scratch in 2015 and basically ignoring it, I dec
 The current site uses Vue for templating & rendering, Vue Router for routing and dynamic link updates, and module-specific CSS.
 
 ## TODO
+- Clear out unused fonts once final decisions are made
 - Add Storybook stories for each component
 - Write unit tests
 - Add Lighthouse tracking
