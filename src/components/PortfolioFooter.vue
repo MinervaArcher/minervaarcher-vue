@@ -1,6 +1,6 @@
 <template>
   <ul class="portfolio-footer">
-    <li v-for="item in items">
+    <li v-for="item in items" :key="item.id">
       <router-link :to="item.url">{{item.label}}</router-link>
     </li>
   </ul>
