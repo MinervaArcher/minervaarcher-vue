@@ -54,18 +54,13 @@ export default {
 
   .figure {
     display: inline-block;
-    width: 60vw;
+    width: 90vw;
     max-width: 1000px;
   }
 
   &.giant {
     p {
       font-size: 2rem;
-    }
-
-    .figure {
-      width: 90vw;
-      max-width: none;
     }
   }
 }
@@ -76,8 +71,18 @@ export default {
       max-width: 600px;
       padding: 0;
     }
-    &.giant p {
-      font-size: 3rem;
+
+    .figure {
+      width: 60vw;
+    }
+    &.giant {
+      p {
+        font-size: 3rem;
+      }
+      .figure {
+        width: 90vw;
+        max-width: none;
+      }
     }
   }
 }
