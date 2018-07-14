@@ -29,7 +29,7 @@
     />
     <ProjectBlock
       text="
-      I ended up doing full-stack work on this site with as a junior developer with
+      I ended up doing full-stack work on this site as a junior developer with
       very little oversight. As you might guess, this presented a tremendous learning curve
       for me. I wrote lots of spaghetti code and discovered many anti-patterns the hard way.
       But I also built numerous responsive layouts, an image upload tool for user avatars,
