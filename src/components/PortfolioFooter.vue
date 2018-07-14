@@ -1,5 +1,5 @@
 <template>
-  <ul class="portfolio-footer">
+  <ul class="portfolio-footer" role="navigation" aria-label="portfolio navigation">
     <li v-for="item in items" :key="item.id">
       <router-link :to="item.url">{{item.label}}</router-link>
     </li>
