@@ -1,7 +1,7 @@
 {
-  mode: 'development',
+  mode: 'production',
   context: '/Users/minervaarcher/Sites/minervaarcher-vue',
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   node: {
     setImmediate: false,
     process: 'mock',
@@ -13,8 +13,9 @@
   },
   output: {
     path: '/Users/minervaarcher/Sites/minervaarcher-vue/dist',
-    filename: '[name].js',
-    publicPath: '/'
+    filename: 'js/[name].[chunkhash:8].js',
+    publicPath: '/',
+    chunkFilename: 'js/[name].[chunkhash:8].js'
   },
   resolve: {
     symlinks: false,
@@ -53,7 +54,7 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/.cache/vue-loader',
-              cacheIdentifier: '412a6ffb'
+              cacheIdentifier: '626d7eb8'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
@@ -64,7 +65,7 @@
                 preserveWhitespace: false
               },
               cacheDirectory: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/.cache/vue-loader',
-              cacheIdentifier: '412a6ffb'
+              cacheIdentifier: '626d7eb8'
             }
           }
         ]
@@ -118,8 +119,8 @@
           {
             loader: 'url-loader',
             options: {
-              limit: 4096,
-              name: 'fonts/[name].[hash:8].[ext]'
+              limit: 10000,
+              name: 'fonts/[name].[hash:7].[ext]'
             }
           }
         ]
@@ -142,19 +143,15 @@
           {
             resourceQuery: /module/,
             use: [
-              /* config.module.rule('css').oneOf('vue-modules').use('vue-style-loader') */
+              /* config.module.rule('css').oneOf('vue-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('css').oneOf('vue-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2,
                   modules: true,
@@ -174,19 +171,15 @@
           {
             resourceQuery: /\?vue/,
             use: [
-              /* config.module.rule('css').oneOf('vue').use('vue-style-loader') */
+              /* config.module.rule('css').oneOf('vue').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('css').oneOf('vue').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2
                 }
@@ -204,19 +197,15 @@
           {
             test: /\.module\.\w+$/,
             use: [
-              /* config.module.rule('css').oneOf('normal-modules').use('vue-style-loader') */
+              /* config.module.rule('css').oneOf('normal-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('css').oneOf('normal-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2,
                   modules: true,
@@ -235,19 +224,15 @@
           /* config.module.rule('css').oneOf('normal') */
           {
             use: [
-              /* config.module.rule('css').oneOf('normal').use('vue-style-loader') */
+              /* config.module.rule('css').oneOf('normal').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('css').oneOf('normal').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2
                 }
@@ -271,19 +256,15 @@
           {
             resourceQuery: /module/,
             use: [
-              /* config.module.rule('postcss').oneOf('vue-modules').use('vue-style-loader') */
+              /* config.module.rule('postcss').oneOf('vue-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('postcss').oneOf('vue-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2,
                   modules: true,
@@ -303,19 +284,15 @@
           {
             resourceQuery: /\?vue/,
             use: [
-              /* config.module.rule('postcss').oneOf('vue').use('vue-style-loader') */
+              /* config.module.rule('postcss').oneOf('vue').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('postcss').oneOf('vue').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2
                 }
@@ -333,19 +310,15 @@
           {
             test: /\.module\.\w+$/,
             use: [
-              /* config.module.rule('postcss').oneOf('normal-modules').use('vue-style-loader') */
+              /* config.module.rule('postcss').oneOf('normal-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('postcss').oneOf('normal-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2,
                   modules: true,
@@ -364,19 +337,15 @@
           /* config.module.rule('postcss').oneOf('normal') */
           {
             use: [
-              /* config.module.rule('postcss').oneOf('normal').use('vue-style-loader') */
+              /* config.module.rule('postcss').oneOf('normal').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('postcss').oneOf('normal').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 2
                 }
@@ -400,19 +369,15 @@
           {
             resourceQuery: /module/,
             use: [
-              /* config.module.rule('scss').oneOf('vue-modules').use('vue-style-loader') */
+              /* config.module.rule('scss').oneOf('vue-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('scss').oneOf('vue-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -439,19 +404,15 @@
           {
             resourceQuery: /\?vue/,
             use: [
-              /* config.module.rule('scss').oneOf('vue').use('vue-style-loader') */
+              /* config.module.rule('scss').oneOf('vue').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('scss').oneOf('vue').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -476,19 +437,15 @@
           {
             test: /\.module\.\w+$/,
             use: [
-              /* config.module.rule('scss').oneOf('normal-modules').use('vue-style-loader') */
+              /* config.module.rule('scss').oneOf('normal-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('scss').oneOf('normal-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -514,19 +471,15 @@
           /* config.module.rule('scss').oneOf('normal') */
           {
             use: [
-              /* config.module.rule('scss').oneOf('normal').use('vue-style-loader') */
+              /* config.module.rule('scss').oneOf('normal').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('scss').oneOf('normal').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -557,19 +510,15 @@
           {
             resourceQuery: /module/,
             use: [
-              /* config.module.rule('sass').oneOf('vue-modules').use('vue-style-loader') */
+              /* config.module.rule('sass').oneOf('vue-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('sass').oneOf('vue-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -597,19 +546,15 @@
           {
             resourceQuery: /\?vue/,
             use: [
-              /* config.module.rule('sass').oneOf('vue').use('vue-style-loader') */
+              /* config.module.rule('sass').oneOf('vue').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('sass').oneOf('vue').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -635,19 +580,15 @@
           {
             test: /\.module\.\w+$/,
             use: [
-              /* config.module.rule('sass').oneOf('normal-modules').use('vue-style-loader') */
+              /* config.module.rule('sass').oneOf('normal-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('sass').oneOf('normal-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -674,19 +615,15 @@
           /* config.module.rule('sass').oneOf('normal') */
           {
             use: [
-              /* config.module.rule('sass').oneOf('normal').use('vue-style-loader') */
+              /* config.module.rule('sass').oneOf('normal').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('sass').oneOf('normal').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -718,19 +655,15 @@
           {
             resourceQuery: /module/,
             use: [
-              /* config.module.rule('less').oneOf('vue-modules').use('vue-style-loader') */
+              /* config.module.rule('less').oneOf('vue-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('less').oneOf('vue-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -757,19 +690,15 @@
           {
             resourceQuery: /\?vue/,
             use: [
-              /* config.module.rule('less').oneOf('vue').use('vue-style-loader') */
+              /* config.module.rule('less').oneOf('vue').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('less').oneOf('vue').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -794,19 +723,15 @@
           {
             test: /\.module\.\w+$/,
             use: [
-              /* config.module.rule('less').oneOf('normal-modules').use('vue-style-loader') */
+              /* config.module.rule('less').oneOf('normal-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('less').oneOf('normal-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -832,19 +757,15 @@
           /* config.module.rule('less').oneOf('normal') */
           {
             use: [
-              /* config.module.rule('less').oneOf('normal').use('vue-style-loader') */
+              /* config.module.rule('less').oneOf('normal').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('less').oneOf('normal').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -875,19 +796,15 @@
           {
             resourceQuery: /module/,
             use: [
-              /* config.module.rule('stylus').oneOf('vue-modules').use('vue-style-loader') */
+              /* config.module.rule('stylus').oneOf('vue-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('stylus').oneOf('vue-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -915,19 +832,15 @@
           {
             resourceQuery: /\?vue/,
             use: [
-              /* config.module.rule('stylus').oneOf('vue').use('vue-style-loader') */
+              /* config.module.rule('stylus').oneOf('vue').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('stylus').oneOf('vue').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -953,19 +866,15 @@
           {
             test: /\.module\.\w+$/,
             use: [
-              /* config.module.rule('stylus').oneOf('normal-modules').use('vue-style-loader') */
+              /* config.module.rule('stylus').oneOf('normal-modules').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('stylus').oneOf('normal-modules').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3,
                   modules: true,
@@ -992,19 +901,15 @@
           /* config.module.rule('stylus').oneOf('normal') */
           {
             use: [
-              /* config.module.rule('stylus').oneOf('normal').use('vue-style-loader') */
+              /* config.module.rule('stylus').oneOf('normal').use('extract-css-loader') */
               {
-                loader: 'vue-style-loader',
-                options: {
-                  sourceMap: false,
-                  shadowMode: false
-                }
+                loader: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/mini-css-extract-plugin/dist/loader.js'
               },
               /* config.module.rule('stylus').oneOf('normal').use('css-loader') */
               {
                 loader: 'css-loader',
                 options: {
-                  minimize: false,
+                  minimize: true,
                   sourceMap: false,
                   importLoaders: 3
                 }
@@ -1032,7 +937,22 @@
       {
         test: /\.jsx?$/,
         exclude: [
-          function () { /* omitted long function */ }
+          filepath => {
+                      // always trasnpile js in vue files
+                      if (/\.vue\.jsx?$/.test(filepath)) {
+                        return false
+                      }
+                      // exclude dynamic entries from cli-service
+                      if (filepath.startsWith(cliServicePath)) {
+                        return true
+                      }
+                      // check if this is something the user explicitly wants to transpile
+                      if (options.transpileDependencies.some(dep => filepath.match(dep))) {
+                        return false
+                      }
+                      // Don't transpile node_modules
+                      return /node_modules/.test(filepath)
+                    }
         ],
         use: [
           /* config.module.rule('js').use('cache-loader') */
@@ -1040,8 +960,12 @@
             loader: 'cache-loader',
             options: {
               cacheDirectory: '/Users/minervaarcher/Sites/minervaarcher-vue/node_modules/.cache/babel-loader',
-              cacheIdentifier: '397ef012'
+              cacheIdentifier: '9c418ee6'
             }
+          },
+          /* config.module.rule('js').use('thread-loader') */
+          {
+            loader: 'thread-loader'
           },
           /* config.module.rule('js').use('babel-loader') */
           {
@@ -1068,14 +992,105 @@
                 '.vue'
               ],
               cache: true,
-              cacheIdentifier: '15b34b71',
+              cacheIdentifier: 'd3277cb4',
               emitWarning: true,
-              formatter: function () { /* omitted long function */ }
+              formatter: function (results) {
+                  let errors = 0;
+                  let warnings = 0;
+                  let fixableErrors = 0;
+                  let fixableWarnings = 0;
+              
+                  const resultsWithMessages = results.filter(result => result.messages.length > 0);
+              
+                  let output = resultsWithMessages.reduce((resultsOutput, result) => {
+                      const messages = result.messages.map(message => `${formatMessage(message, result)}\n\n`);
+              
+                      errors += result.errorCount;
+                      warnings += result.warningCount;
+                      fixableErrors += result.fixableErrorCount;
+                      fixableWarnings += result.fixableWarningCount;
+              
+                      return resultsOutput.concat(messages);
+                  }, []).join("\n");
+              
+                  output += "\n";
+                  output += formatSummary(errors, warnings, fixableErrors, fixableWarnings);
+              
+                  return (errors + warnings) > 0 ? output : "";
+              }
             }
           }
         ]
       }
     ]
+  },
+  optimization: {
+    minimizer: [
+      {
+        options: {
+          test: /\.js(\?.*)?$/i,
+          warningsFilter: function () {
+                return true;
+              },
+          extractComments: false,
+          sourceMap: true,
+          cache: true,
+          parallel: true,
+          include: undefined,
+          exclude: undefined,
+          uglifyOptions: {
+            output: {
+              comments: /^\**!|@preserve|@license|@cc_on/
+            },
+            compress: {
+              arrows: false,
+              collapse_vars: false,
+              comparisons: false,
+              computed_props: false,
+              hoist_funs: false,
+              hoist_props: false,
+              hoist_vars: false,
+              inline: false,
+              loops: false,
+              negate_iife: false,
+              properties: false,
+              reduce_funcs: false,
+              reduce_vars: false,
+              switches: false,
+              toplevel: false,
+              typeofs: false,
+              booleans: true,
+              if_return: true,
+              sequences: true,
+              unused: true,
+              conditionals: true,
+              dead_code: true,
+              evaluate: true
+            },
+            mangle: {
+              safari10: true
+            }
+          }
+        }
+      }
+    ],
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          name: 'chunk-vendors',
+          test: /[\\\/]node_modules[\\\/]/,
+          priority: -10,
+          chunks: 'initial'
+        },
+        common: {
+          name: 'chunk-common',
+          minChunks: 2,
+          priority: -20,
+          chunks: 'initial',
+          reuseExistingChunk: true
+        }
+      }
+    }
   },
   plugins: [
     /* config.plugin('vue-loader') */
@@ -1084,7 +1099,7 @@
     new DefinePlugin(
       {
         'process.env': {
-          NODE_ENV: '"development"',
+          NODE_ENV: '"production"',
           BASE_URL: '"/"'
         }
       }
@@ -1095,23 +1110,93 @@
     new FriendlyErrorsWebpackPlugin(
       {
         additionalTransformers: [
-          function () { /* omitted long function */ }
+          error => {
+            if (error.webpackError) {
+              const message = typeof error.webpackError === 'string'
+                ? error.webpackError
+                : error.webpackError.message || ''
+              for (const { re, msg, type } of rules) {
+                const match = message.match(re)
+                if (match) {
+                  return Object.assign({}, error, {
+                    // type is necessary to avoid being printed as defualt error
+                    // by friendly-error-webpack-plugin
+                    type,
+                    shortMessage: msg(error, match)
+                  })
+                }
+              }
+              // no match, unknown webpack error withotu a message.
+              // friendly-error-webpack-plugin fails to handle this.
+              if (!error.message) {
+                return Object.assign({}, error, {
+                  type: 'unknown-webpack-error',
+                  shortMessage: message
+                })
+              }
+            }
+            return error
+          }
         ],
         additionalFormatters: [
-          function () { /* omitted long function */ }
+          errors => {
+            errors = errors.filter(e => e.shortMessage)
+            if (errors.length) {
+              return errors.map(e => e.shortMessage)
+            }
+          }
         ]
       }
     ),
-    /* config.plugin('hmr') */
-    new HotModuleReplacementPlugin(),
-    /* config.plugin('no-emit-on-errors') */
-    new NoEmitOnErrorsPlugin(),
-    /* config.plugin('progress') */
-    new ProgressPlugin(),
+    /* config.plugin('extract-css') */
+    new MiniCssExtractPlugin(
+      {
+        filename: 'css/[name].[contenthash:8].css',
+        chunkFilename: 'css/[name].[contenthash:8].css'
+      }
+    ),
+    /* config.plugin('optimize-css') */
+    new OptimizeCssAssetsWebpackPlugin(
+      {
+        canPrint: false,
+        cssProcessorOptions: {
+          safe: true,
+          autoprefixer: {
+            disable: true
+          },
+          mergeLonghand: false
+        }
+      }
+    ),
+    /* config.plugin('hash-module-ids') */
+    new HashedModuleIdsPlugin(),
     /* config.plugin('html') */
     new HtmlWebpackPlugin(
       {
-        templateParameters: function () { /* omitted long function */ },
+        templateParameters: (compilation, assets, pluginOptions) => {
+                // enhance html-webpack-plugin's built in template params
+                let stats
+                return Object.assign({
+                  // make stats lazy as it is expensive
+                  get webpack () {
+                    return stats || (stats = compilation.getStats().toJson())
+                  },
+                  compilation: compilation,
+                  webpackConfig: compilation.options,
+                  htmlWebpackPlugin: {
+                    files: assets,
+                    options: pluginOptions
+                  }
+                }, resolveClientEnv(options, true /* raw */))
+              },
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          removeAttributeQuotes: true,
+          collapseBooleanAttributes: true,
+          removeScriptTypeAttributes: true
+        },
+        chunksSortMode: 'dependency',
         template: '/Users/minervaarcher/Sites/minervaarcher-vue/public/index.html'
       }
     ),
@@ -1151,6 +1236,18 @@
           ]
         }
       ]
+    ),
+    /* config.plugin('workbox') */
+    new GenerateSW(
+      {
+        exclude: [
+          /\.map$/,
+          /img\/icons\//,
+          /favicon\.ico$/,
+          /manifest\.json$/
+        ],
+        cacheId: 'minervaarcher-vue'
+      }
     )
   ],
   entry: {
