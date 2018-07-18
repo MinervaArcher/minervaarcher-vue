@@ -5,12 +5,12 @@
   @keyup="$emit('keyup', $event)"
   >
     <router-link
-    :to="url"
-    @click.native="$emit('click', $event)"
-    role="menuitem"
-    >
-    {{name}}
-  </router-link>
+      :to="url"
+      @click.native="$emit('click', $event)"
+      role="menuitem"
+      >
+      {{name}}
+    </router-link>
   </li>
 </template>
 
@@ -40,6 +40,12 @@ export default {
   a {
     color: $gray;
     text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active, {
+      color: $black;
+    }
   }
 
   &:focus {
@@ -47,19 +53,11 @@ export default {
 
     a {
       color: $black;
-      font-family: 'Open Sans Bold';
     }
   }
+}
 
-  a:hover,
-  a:focus,
-  a:active, {
-    color: $black;
-    font-family: 'Open Sans Bold';
-  }
-
-  .router-link-exact-active {
-    text-decoration: underline;
-  }
+.router-link-exact-active {
+  border-bottom: 3px solid;
 }
 </style>

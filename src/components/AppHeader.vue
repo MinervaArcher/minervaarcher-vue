@@ -230,6 +230,7 @@ header {
   text-align: center;
   top: 3rem;
   padding-top: 3rem;
+  font-family: 'Open Sans Bold';
 }
 
 .header__nav--mobile li {
