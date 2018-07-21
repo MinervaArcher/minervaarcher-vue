@@ -17,7 +17,8 @@ export default {
 };
 </script>
 
-<style type="scss" scoped>
+<style lang="scss" scoped>
+@import '../scss/_colors.scss';
 @import '../scss/_fonts.scss';
 
 .portfolio-footer {
@@ -37,11 +38,16 @@ export default {
 }
 
 .portfolio-footer a {
-  color: black;
+  color: $gray;
   text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    color: $black;
+  }
 }
 
 .portfolio-footer .router-link-exact-active {
+  color: $black;
   text-decoration: underline;
 }
 </style>
