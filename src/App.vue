@@ -28,7 +28,6 @@ export default {
 #app {
   position: relative;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-display: swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 5vw;
