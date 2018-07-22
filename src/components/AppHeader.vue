@@ -192,7 +192,7 @@ header {
   flex-wrap: wrap;
   width: 100%;
   min-height: 3.5rem;
-  font-family: 'Open Sans Bold';
+  font-family: 'Open Sans Bold', Helvetica, Arial, sans-serif;
 }
 
 .header--desktop {
@@ -200,7 +200,7 @@ header {
 }
 
 .header__logo {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Muli', Helvetica, Arial, sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -230,7 +230,7 @@ header {
   text-align: center;
   top: 3rem;
   padding-top: 3rem;
-  font-family: 'Open Sans Bold';
+  font-family: 'Open Sans Bold', Helvetica, Arial, sans-serif;
 }
 
 .header__nav--mobile li {

@@ -31,7 +31,7 @@ export default {
 
 .portfolio-footer li {
   display: inline-block;
-  font-family: 'Open Sans Bold';
+  font-family: 'Open Sans Bold', Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   line-height: 1.2em;
   padding: 0.5em 0.25em;

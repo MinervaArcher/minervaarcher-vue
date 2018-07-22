@@ -2,15 +2,18 @@ $font_dir: '~@/fonts/';
 
 @font-face {
   font-family: 'Muli';
+  font-display: swap;
   src: url($font_dir +  'Muli-SemiBold.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Open Sans';
+  font-display: fallback;
   src: url($font_dir + 'OpenSans-Regular.ttf') format('opentype');
 }
 
 @font-face {
   font-family: 'Open Sans Bold';
+  font-display: fallback;
   src: url($font_dir + 'OpenSans-Bold.ttf') format('opentype');
 }
