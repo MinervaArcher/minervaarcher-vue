@@ -135,6 +135,7 @@ export default {
       // If a letter key is pressed, find the first menu item
       // that begins with that letter and focus on that item
       if (/^[a-z]{1}$/.test(key)) {
+        // eslint-disable-next-line max-len
         const item = this.$refs.menuitem.find(vEl => vEl.$el.innerText.toLowerCase().slice(0, 1) === key);
         if (item) item.$el.focus();
       } else {

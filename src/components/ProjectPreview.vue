@@ -143,6 +143,12 @@ export default {
   }
 }
 
+@media (min-width: 800px) {
+  .preview__image {
+    width: 50%;
+  }
+}
+
 @media (min-width: 800px) and (orientation: landscape) {
   .preview {
     height: 70vh;
