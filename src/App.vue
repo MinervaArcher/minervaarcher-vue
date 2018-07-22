@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <AppHeader />
-    <router-view />
+    <transition name="component-fade">
+      <router-view />
+    </transition>
     <AppFooter />
   </div>
 </template>
@@ -25,12 +27,18 @@ export default {
 
 #app {
   position: relative;
-  // font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-display: swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 5vw;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .2s ease;
+}
+.component-fade-enter, .component-fade-leave-to {
+  opacity: 0;
 }
 
 @media (min-width: 800px) {
