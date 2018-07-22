@@ -22,24 +22,29 @@
     />
     <div class="detail-text">
       <p>
-        After a few high school years dabbling around with Geocities pages,
-        I went to college, majored in English, and planned to become an editor.
-        I mean, sure, I worked on websites with my friends throughout college
-        too, but I didn't think of myself as a programmer. Afterwards, I spent
-        about a decade working in educational publishing and defense contracting.
-        HTML and CSS were fun hobbies, but had very little to do with my "real job"
-        aspirations. After all, programming was for computer science majors, right?
+        Like many front-end developers, I came to programming through an unconventional path.
+        I majored in English during college and planned to be an editor.
+        I mean, sure, I built simple websites throughout high school and college,
+        but I didn't think of myself as a web developer.
       </p>
       <p>
-        But after a year and half managing a web project where I was writing
-        and editing copious amounts of HTML and CSS, and begging for JavaScript
-        changes that no one had time to make, I learned JavaScript and started
-        editing that code too. Before long, web development became my day job,
-        not just a hobby.
+        Afterwards, I spent about a decade working in educational publishing and defense contracting.
+        Tinkering in CSS was fun, but it had very little to do with my career
+        aspirations. Most people I knew who built websites professionally had
+        trained in either design or computer science&mdash;they didn't spend
+        four years composing feminist interpretations of the literary canon.
+      </p>
+      <p>
+        The turning point came when I spent a year and half managing a web project with
+        limited team resources. Since I was already familiar with HTML and CSS, I ended up
+        writing and editing a lot of front-end code. Then, I slowly learned JavaScript and
+        began working on that code too. It turns out being concise and caring about punctuation
+        usage as important for programmers as it is for writers. Before long, web development
+        became my day job.
       </p>
       <p>
         Like most front-end developers, I'm simultaneously inspired and appalled
-        by how many libraries, build tools, and new features keep emerging for
+        by how many new libraries, build tools, and APIs keep emerging for
         the web. I built this site to show off a bit of what I know, and areas
         I'm interesting in pursuing further. You can check out the code for this
         site at
@@ -59,18 +64,18 @@
           noreferrer
         >Github</a>,
         <a
-          href="https://about.me/minerva_archer"
-          target="_blank"
-          noopener
-          noreferrer
-        >About.me</a>,
-        and
-        <a
           href="https://glitch.com/@MinervaArcher"
           target="_blank"
           noopener
           noreferrer
-        >Glitch</a>.
+        >Glitch</a>,
+        and
+        <a
+          href="https://about.me/minerva_archer"
+          target="_blank"
+          noopener
+          noreferrer
+        >About.me</a>.
         I'm also on
         <a
           href="https:/www.linkedin.com/in/minerva-a-12a5a85b"
@@ -78,7 +83,7 @@
           noopener
           noreferrer
         >LinkedIn</a>,
-        where you can view my work history if you're logged in.
+        where my work history is visible to logged-in users.
       </p>
     </div>
   </Page>

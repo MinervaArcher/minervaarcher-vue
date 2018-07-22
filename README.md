@@ -9,7 +9,7 @@ The current site uses Vue for templating & rendering, Vue Router for routing and
 - Add Storybook stories for each component
 - Write unit tests
 - ~Add Lighthouse tracking~
-- Refine image srcset sizes
+- ~Refine image srcset sizes~
 - ~Fully test accessibility features~
 - Enable service workers
 - ~Favicon~
