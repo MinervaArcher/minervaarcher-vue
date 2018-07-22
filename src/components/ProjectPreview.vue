@@ -5,7 +5,15 @@
     :href="url"
     :style="{'background-color': backgroundColor}"
   >
-    <img class="preview__image" :src="img" alt="">
+    <img
+    class="preview__image"
+    :srcset="srcset"
+    sizes="
+    (max-width: 800px) 50vw,
+    100vw
+    "
+    :src="src"
+    alt="">
     <div
     class="preview__title"
     :class="textModifier"
@@ -23,7 +31,11 @@ export default {
       type: String,
       default: '',
     },
-    img: {
+    src: {
+      type: String,
+      default: '',
+    },
+    srcset: {
       type: String,
       default: '',
     },
@@ -73,11 +85,12 @@ export default {
 
 <style lang="scss">
 .preview {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  height: 40vh;
+  min-height: 40vh;
   padding: 3vw;
 }
 
@@ -107,8 +120,8 @@ export default {
 
 .preview__image {
   position: absolute;
-  max-height: 25vw;
-  max-width: 25vw;
+  width: 75%;
+  max-width: 50vw;
   transition: opacity 200ms linear;
 }
 
@@ -121,6 +134,12 @@ export default {
 
   .preview__image {
     opacity: 0.3;
+  }
+}
+
+@media (orientation: landscape) {
+  .preview {
+    min-height: 40vw;
   }
 }
 
