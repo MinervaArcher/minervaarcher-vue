@@ -1,9 +1,10 @@
 <template>
   <figure class="figure">
     <img
-    :srcset="srcset"
+    ref="image"
+    :srcset="imgSrcset"
     :sizes="sizes"
-    :src="src"
+    :src="imgSrc"
     :alt="alt"
     />
     <figcaption class="figure__caption">{{caption}}</figcaption>
@@ -11,6 +12,9 @@
 </template>
 
 <script>
+import 'intersection-observer';
+import photoIcon from '../assets/img_placeholder.png';
+
 export default {
   name: 'AppFigure',
   props: {
@@ -37,6 +41,33 @@ export default {
       default: '',
       required: true,
     },
+  },
+  data() {
+    return {
+      observer: null,
+      isIntersected: false,
+    };
+  },
+  computed: {
+    imgSrc() {
+      return this.isIntersected ? this.src : photoIcon;
+    },
+    imgSrcset() {
+      return this.isIntersected ? this.srcset : '';
+    },
+  },
+  mounted() {
+    this.observer = new IntersectionObserver((entries) => {
+      const image = entries[0];
+      if (image.isIntersecting) {
+        this.isIntersected = true;
+        this.observer.disconnect();
+      }
+    });
+    this.observer.observe(this.$refs.image);
+  },
+  beforeDestroy() {
+    this.observer.disconnect();
   },
 };
 </script>

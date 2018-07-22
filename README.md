@@ -14,4 +14,4 @@ The current site uses Vue for templating & rendering, Vue Router for routing and
 - Enable service workers
 - ~Favicon~
 - Convert from vue-cli over to pure webpack config
-- Lazy-load images in portfolio pages
+- ~Lazy-load images in portfolio pages~
