@@ -12,7 +12,6 @@
         /img/series_ipad_portrait_500.jpg 500w,
         /img/series_ipad_portrait_768.jpg 768w,
       `,
-      sizes: '100vw',
       src: '/img/series_ipad_portrait_768.jpg',
       alt: `iPad rendering of the Showtime series detail page, using art from I'm Dying Up Here`,
       caption: 'Series Detail tablet portrait view'
@@ -28,7 +27,6 @@
         /img/series_ipad_pro_500.jpg 500w,
         /img/series_ipad_pro_1000.jpg 1000w
       `,
-      sizes: '100vw',
       src: '/img/series_ipad_pro_1000.jpg',
       alt: `iPad Pro rendering of the Showtime series detail
       page with shortened header on scroll, using art from Shameless`,
@@ -49,7 +47,6 @@
         /img/series_blackberry_playbook_500.jpg 500w,
         /img/series_blackberry_playbook_1000.jpg 1000w
       `,
-      sizes: '100vw',
       src: '/img/series_blackberry_playbook_1000.jpg',
       alt: `Blackberry Playbook rendering of the Showtime series
       detail page with full header, using art from Billions`,
@@ -64,7 +61,6 @@
         /img/series_desktop_1500.jpg 1500w,
         /img/series_desktop_2000.jpg 2000w
       `,
-      sizes: '100vw',
       src: '/img/series_desktop_2000.jpg',
       alt: `Desktop rendering of the Showtime series detail
       page with full header, using art from Patrick Melrose`,

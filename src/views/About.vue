@@ -11,7 +11,6 @@
           /img/nyc_1500.jpg 1500w,
           /img/nyc_2000.jpg 2000w
         `,
-        sizes: '100vw',
         src: '/img/nyc_2000.jpg',
         alt: `
           Black and white photo of high-rise residential buildings

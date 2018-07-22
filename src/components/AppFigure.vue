@@ -25,7 +25,7 @@ export default {
     },
     sizes: {
       type: String,
-      default: '',
+      default: '100vw',
     },
     alt: {
       type: String,

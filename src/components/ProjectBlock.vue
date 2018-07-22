@@ -7,6 +7,7 @@
     <AppFigure
       v-if="figure"
       v-bind="figure"
+      :sizes="figureSizes"
     />
   </div>
 </template>
@@ -17,7 +18,7 @@ import AppFigure from './AppFigure.vue';
   * This should contain figure data OR plain text, not both
   */
 export default {
-  name: 'ProjectBlockImage',
+  name: 'ProjectBlock',
   components: { AppFigure },
   props: {
     text: {
@@ -31,6 +32,15 @@ export default {
     giant: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    figureSizes() {
+      if (!this.figure) return false;
+
+      if (this.giant) return '90vw';
+
+      return '(max-width: 800px) 90vw, 60vw';
     },
   },
 };
