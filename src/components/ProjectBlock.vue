@@ -37,6 +37,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../scss/_colors.scss';
+
 .project-block {
   display: block;
   width: 100%;
@@ -50,6 +52,16 @@ export default {
     padding: 2rem;
     font-size: 1.2rem;
     line-height: 1.6em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $gray;
+    border-bottom: 1px solid $black;
+
+    &:hover, &:focus, &:active {
+      color: $black;
+    }
   }
 
   .figure {

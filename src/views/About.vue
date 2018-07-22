@@ -1,6 +1,6 @@
 <template>
   <Page
-    head="Code like a girl"
+    head="Coding like a girl since 2013"
     subhead=""
   >
     <ProjectBlock
@@ -45,16 +45,41 @@
         I'm interesting in pursuing further. You can check out the code for this
         site at
         <a
-          href="https://github.com/minervaarcher-vue"
+          href="https://github.com/MinervaArcher/minervaarcher-vue"
           target="_blank"
           noopener
           noreferrer
-        >
-          its Github repo
-        </a>.
+        >its Github repo</a>.
       </p>
       <p>
-
+        You can find me elsewhere on the web on
+        <a
+          href="https://github.com/MinervaArcher"
+          target="_blank"
+          noopener
+          noreferrer
+        >Github</a>,
+        <a
+          href="https://about.me/minerva_archer"
+          target="_blank"
+          noopener
+          noreferrer
+        >About.me</a>,
+        and
+        <a
+          href="https://glitch.com/@MinervaArcher"
+          target="_blank"
+          noopener
+          noreferrer
+        >Glitch</a>.
+        I'm also on
+        <a
+          href="https:/www.linkedin.com/in/minerva-a-12a5a85b"
+          target="_blank"
+          noopener
+          noreferrer
+        >LinkedIn</a>,
+        where you can view my work history if you're logged in.
       </p>
     </div>
   </Page>
@@ -73,17 +98,29 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import '../scss/_colors.scss';
+
 .detail-text {
   width: 100%;
   text-align: center;
   margin-bottom: 4em;
-}
 
-.detail-text p {
-  text-align: left;
-  line-height: 1.5em;
-  margin: 0 auto 1em;
+  p {
+    text-align: left;
+    line-height: 1.5em;
+    margin: 0 auto 1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $gray;
+    border-bottom: 1px solid $black;
+
+    &:hover, &:focus, &:active {
+      color: $black;
+    }
+  }
 }
 
 @media (min-width: 800px) {
