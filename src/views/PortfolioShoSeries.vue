@@ -1,9 +1,9 @@
 <template>
   <Page
-    head="Showtime - Series Detail"
+    head="Showtime Series Detail"
     subhead="
     One of the first major features I built at Showtime was an updated series detail page
-    with bold graphics and lots of scroll behavior
+    with bold graphics and lots of scroll behavior.
     "
   >
   <ProjectBlock
@@ -35,10 +35,10 @@
   />
   <ProjectBlock
     text="
-      If you emulate touch devices while viewing this page, you might wonder why the layout
-      isn't fully responsive. Because we offer apps specifically for iOS and Android platforms,
-      our product team didn't include mobile layouts as a design requirement for web.
-      But great new features are coming to the web apps, so stay tuned.
+      Because Showtime offers native apps for iOS and Android,
+      most of its web layouts (including this one) aren't fully responsive.
+      However, we tried to accommodate as many viewport widths as the
+      design would allow.
     "
   />
   <ProjectBlock

@@ -22,17 +22,17 @@
     />
     <div class="detail-text">
       <p>
-        Like many front-end developers, I came to programming through an unconventional path.
-        I majored in English during college and planned to be an editor.
+        Like many front-end developers, I came to programming through a nontraditional
+        path. I majored in English during college and planned to be an editor.
         I mean, sure, I built simple websites throughout high school and college,
         but I didn't think of myself as a web developer.
       </p>
       <p>
-        Afterwards, I spent about a decade working in educational publishing and defense contracting.
-        Tinkering in CSS was fun, but it had very little to do with my career
-        aspirations. Most people I knew who built websites professionally had
-        trained in either design or computer science&mdash;they didn't spend
-        four years composing feminist interpretations of the literary canon.
+        Afterwards, I spent about a decade working in educational publishing
+        and defense contracting. Tinkering in CSS was fun, but it had very little
+        to do with my career aspirations. Most people I knew who built websites
+        professionally had trained in either design or computer science&mdash;they
+        didn't spend four years dissecting the Western literary canon through a feminist lens.
       </p>
       <p>
         The turning point came when I spent a year and half managing a web project with
