@@ -48,6 +48,5 @@ export default {
 
 .portfolio-footer .router-link-exact-active {
   color: $black;
-  text-decoration: underline;
 }
 </style>

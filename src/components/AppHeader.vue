@@ -1,7 +1,7 @@
 <template>
   <header role="banner">
     <div class="header header--mobile" role="navigation">
-      <span ref="logo" class="header__logo">Minerva Archer</span>
+      <a ref="logo" href="/" class="header__logo">Minerva Archer</a>
       <button
       id="mobile-menu-button"
       class="header__menu-button"
@@ -47,7 +47,7 @@
       </ul>
     </div>
     <div class="header header--desktop" role="navigation">
-      <span class="header__logo">Minerva Archer</span>
+      <a href="/" class="header__logo">Minerva Archer</a>
       <ul class="header__nav--desktop">
       <AppHeaderMenuItem
       v-for="link in links"
@@ -202,8 +202,10 @@ header {
 
 .header__logo {
   font-family: 'Muli', Helvetica, Arial, sans-serif;
+  color: $black;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .header__menu-button {
