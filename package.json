@@ -1,8 +1,12 @@
 {
   "name": "minervaarcher-vue",
   "version": "0.2.0",
-  "description": "",
+  "description": "My personal website, rewritten using Vue.js",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MinervaArcher/minervaarcher-vue.git"
+  },
   "scripts": {
     "start": "webpack-dev-server --open --mode=development",
     "build": "webpack --mode=production; chmod -R 755 ./dist",
