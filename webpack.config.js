@@ -76,13 +76,13 @@ module.exports = (env, argv) => ({
         ],
         modules: [
             'node_modules',
-            path.resolve(__dirname, 'nodea_modueles'),
+            path.resolve(__dirname, 'node_modules'),
         ],
     },
     resolveLoader: {
         modules: [
             'node_modules',
-            path.resolve(__dirname, 'nodea_modueles'),
+            path.resolve(__dirname, 'node_modules'),
         ],
     },
     ...(argv.mode === 'production' ?
