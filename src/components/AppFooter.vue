@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .footer {
   padding: 1.5rem;
   text-align: center;

@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .page {
   position: relative;
   width: 100%;
