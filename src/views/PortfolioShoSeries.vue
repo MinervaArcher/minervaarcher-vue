@@ -1,24 +1,33 @@
 <template>
   <Page
-    head="Showtime Series Detail"
-    subhead="
+    head="Showtime"
+    subhead='
+    I worked at Showtime from 2016-2018, where I worked on the 
+    <a href="https://www.showtime.com" target="_blank" rel="noopener noreferrer">showtime.com</a> and 
+    <a href="https://www.showtimeanytime.com" target="_blank" rel="noopener noreferrer">showtimeanytime.com</a> sites.
     One of the first major features I built at Showtime was an updated series detail page
-    with bold graphics and lots of scroll behavior.
-    "
+    with bold graphics and lots of interactive scroll behavior. Check out the page for
+    <a href="https://www.showtimeanytime.com/#/series/408" target="_blank" rel="noopener noreferrer">Shameless on Showtime Anytime</a>
+    and watch the resizing header, changing header images, and sticky season subheads as you scroll.
+    '
   >
   <ProjectBlock
     :figure="{
       srcset: `
-        /img/series_ipad_portrait_500.jpg 500w,
-        /img/series_ipad_portrait_768.jpg 768w,
+        /img/series_desktop_500.jpg 500w,
+        /img/series_desktop_1000.jpg 1000w,
+        /img/series_desktop_1500.jpg 1500w,
+        /img/series_desktop_2000.jpg 2000w
       `,
-      src: '/img/series_ipad_portrait_768.jpg',
-      alt: `iPad rendering of the Showtime series detail page, using art from I'm Dying Up Here`,
-      caption: 'Series Detail tablet portrait view'
+      src: '/img/series_desktop_2000.jpg',
+      alt: `Desktop rendering of the Showtime series detail
+      page with full header, using art from Patrick Melrose`,
+      caption: 'Series Detail desktop view'
       }"
+    :giant="true"
   />
   <ProjectBlock
-    text="A dynamic user experience with responsive styles for desktop and tablet"
+    text="The end result is a dynamic user experience with responsive styles for desktop and tablet."
     :giant="true"
   />
   <ProjectBlock
@@ -31,6 +40,17 @@
       alt: `iPad Pro rendering of the Showtime series detail
       page with shortened header on scroll, using art from Shameless`,
       caption: 'Series Detail tablet view'
+      }"
+  />
+  <ProjectBlock
+    :figure="{
+      srcset: `
+        /img/series_ipad_portrait_500.jpg 500w,
+        /img/series_ipad_portrait_768.jpg 768w,
+      `,
+      src: '/img/series_ipad_portrait_768.jpg',
+      alt: `iPad rendering of the Showtime series detail page, using art from I'm Dying Up Here`,
+      caption: 'Series Detail tablet portrait view'
       }"
   />
   <ProjectBlock
@@ -52,21 +72,6 @@
       detail page with full header, using art from Billions`,
       caption: 'Series Detail tablet view'
       }"
-  />
-  <ProjectBlock
-    :figure="{
-      srcset: `
-        /img/series_desktop_500.jpg 500w,
-        /img/series_desktop_1000.jpg 1000w,
-        /img/series_desktop_1500.jpg 1500w,
-        /img/series_desktop_2000.jpg 2000w
-      `,
-      src: '/img/series_desktop_2000.jpg',
-      alt: `Desktop rendering of the Showtime series detail
-      page with full header, using art from Patrick Melrose`,
-      caption: 'Series Detail desktop view'
-      }"
-    :giant="true"
   />
   <PortfolioFooter />
   </Page>
