@@ -146,6 +146,7 @@ export default {
 @media (min-width: 800px) {
   .preview__image {
     width: 50%;
+    max-width: 30vw;
   }
 }
 

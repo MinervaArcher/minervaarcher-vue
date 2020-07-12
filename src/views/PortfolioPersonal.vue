@@ -2,7 +2,7 @@
   <Page
     head="Personal projects"
     subhead="
-    I don't tend to code much outside of work, but I'm fond of one personal project in particular.
+    I don't code much outside of work, but I'm fond of one personal project in particular.
     "
   >
       <ProjectBlock
