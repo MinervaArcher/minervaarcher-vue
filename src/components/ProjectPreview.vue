@@ -133,7 +133,7 @@ export default {
   }
 
   .preview__image {
-    opacity: 0.3;
+    opacity: 0.1;
   }
 }
 

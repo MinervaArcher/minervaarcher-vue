@@ -30,12 +30,13 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 60vh;
+  min-height: 50vh;
   padding: 3rem 2rem;
 
   h1 {
     font-family: 'Muli', Helvetica, Arial, sans-serif;
     font-size: 2rem;
+    line-height: 1.3em;
     max-width: 800px;
   }
 
