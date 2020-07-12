@@ -23,24 +23,18 @@
     <div class="detail-text">
       <p>
         Like many front-end developers, I came to programming through a nontraditional
-        path. I majored in English during college and planned to be an editor.
-        I mean, sure, I built simple websites throughout high school and college,
-        but I didn't think of myself as a web developer.
-      </p>
-      <p>
-        Afterwards, I spent about a decade working in educational publishing
-        and defense contracting. Tinkering in CSS was fun, but it had very little
-        to do with my career aspirations. Most people I knew who built websites
+        path. I majored in English during college and assumed I'd become an editor.
+        Even though I built simple websites throughout high school and college,
+        I didn't consider myself a web developer. Most people I knew who built websites
         professionally had trained in either design or computer science&mdash;they
         didn't spend four years dissecting the Western literary canon through a feminist lens.
       </p>
       <p>
-        The turning point came when I spent a year and half managing a web project with
-        limited team resources. Since I was already familiar with HTML and CSS, I ended up
-        writing and editing a lot of front-end code. Then, I slowly learned JavaScript and
-        began working on that code too. It turns out being concise and caring about punctuation
-        usage as important for programmers as it is for writers. Before long, web development
-        became my day job.
+        After a decade working in other fields, I first realized engineering could be my career
+        path when I spent a year and half managing a web project with limited team resources. 
+        Since I was already familiar with HTML and CSS, I ended up writing and editing a lot 
+        of the project's markup and stylesheets. Over time, I learned JavaScript and began fixing 
+        bugs in the site's functionality. Before long, web development became my day job.
       </p>
       <p>
         Like most front-end developers, I'm simultaneously inspired and appalled
