@@ -1,3 +1,4 @@
+process.traceDeprecation = true;
 const path = require('path');
 const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -236,8 +237,8 @@ module.exports = (env, argv) => ({
         ...(argv.mode === 'production' ? 
             [
                 new MiniCssExtractPlugin({
-                filename: 'css/[name].[contenthash:8].css',
-                chunkFilename: 'css/[name].[contenthash:8].css',
+                    filename: 'css/[name].[contenthash:8].css',
+                    chunkFilename: 'css/[name].[contenthash:8].css',
                 }),
                 new OptimizeCssAssetsPlugin({
                     canPrint: false,
@@ -286,25 +287,21 @@ module.exports = (env, argv) => ({
                 {}),
             template: path.resolve(__dirname, 'public/index.html'),
         }),
-        // new HtmlPwaPlugin({
-        //     name: 'Minerva Archer'
-        // }),
-        // new PreloadPlugin(
-        //     {
-        //         rel: 'preload',
-        //         include: 'initial',
-        //         fileBlacklist: [
-        //         /\.map$/,
-        //         /hot-update\.js$/
-        //         ]
-        //     }
-        // ),
-        // new PreloadPlugin(
-        //     {
-        //         rel: 'prefetch',
-        //         include: 'asyncChunks'
-        //     }
-        // ),
+        new HtmlPwaPlugin({
+            name: 'Minerva Archer'
+        }),
+        new PreloadPlugin({
+            rel: 'preload',
+            include: 'initial',
+            fileBlacklist: [
+                /\.map$/,
+                /hot-update\.js$/
+            ]
+        }),
+        new PreloadPlugin({
+            rel: 'prefetch',
+            include: 'asyncChunks'
+        }),
         new CopyPlugin({
             patterns: [
                 {
