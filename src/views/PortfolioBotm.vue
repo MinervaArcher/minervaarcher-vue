@@ -44,13 +44,6 @@
         caption: 'Book of the Month Selections Page'
         }"
     />
-    <ProjectBlock
-      text='
-      For more layout examples and a thoughtful explanation of the UX decisions that
-      drove them, check out <a href="http://www.nateguerra.com/#/portfolio-template-1/" target="blank">this case study</a>
-      by Nate Guerra, the UX designer for the beta site.
-      '
-    />
     <PortfolioFooter />
   </Page>
 </template>
