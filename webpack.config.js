@@ -1,14 +1,16 @@
 const path = require('path');
+const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const {GenerateSW} = require('workbox-webpack-plugin');
+const HtmlPwaPlugin = require('@vue/cli-plugin-pwa/lib/HtmlPwaPlugin');
+const PreloadPlugin = require('@vue/preload-webpack-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 const buildStyleLoaders = ({ modules = false, mode = 'production'}) => {
     return [
@@ -47,7 +49,7 @@ const buildStyleLoaders = ({ modules = false, mode = 'production'}) => {
 module.exports = (env, argv) => ({
     mode: argv.mode || 'production',
     context: path.resolve(__dirname),
-    devtool: argv.mode === 'production' ? false : 'cheap-module-eval-source-map',
+    devtool: argv.mode === 'production' ? 'source-map' : 'cheap-module-eval-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'public'),
         hot: argv.mode !== 'production',
@@ -284,6 +286,25 @@ module.exports = (env, argv) => ({
                 {}),
             template: path.resolve(__dirname, 'public/index.html'),
         }),
+        // new HtmlPwaPlugin({
+        //     name: 'Minerva Archer'
+        // }),
+        // new PreloadPlugin(
+        //     {
+        //         rel: 'preload',
+        //         include: 'initial',
+        //         fileBlacklist: [
+        //         /\.map$/,
+        //         /hot-update\.js$/
+        //         ]
+        //     }
+        // ),
+        // new PreloadPlugin(
+        //     {
+        //         rel: 'prefetch',
+        //         include: 'asyncChunks'
+        //     }
+        // ),
         new CopyPlugin({
             patterns: [
                 {
@@ -299,6 +320,17 @@ module.exports = (env, argv) => ({
                 }
             ]
         }),
-        
+        ...(argv.mode === 'production' ? [
+            new GenerateSW({
+                cleanupOutdatedCaches: true,
+                exclude: [
+                    /\.map$/,
+                    /img\/icons\//,
+                    /favicon\.ico$/,
+                    /manifest\.json$/
+                ],
+                cacheId: 'minervaarcher-vue'
+            }),
+        ] : [])
     ]
 });

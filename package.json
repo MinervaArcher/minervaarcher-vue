@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode=development",
-    "build": "webpack --mode=production; chmod -R 755 ./dist",
+    "build": "node --trace-deprecation node_modules/.bin/webpack --mode=production; chmod -R 755 ./dist",
     "build-dev": "webpack --mode=development; chmod -R 755 ./dist",
     "test": "jest"
   },
@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "intersection-observer": "^0.11.0",
+    "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4"
   },
@@ -24,6 +25,8 @@
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@vue/babel-preset-app": "^4.4.6",
+    "@vue/cli-plugin-pwa": "^4.4.6",
+    "@vue/preload-webpack-plugin": "^1.1.1",
     "@vue/test-utils": "^1.0.3",
     "autoprefixer": "^9.8.4",
     "babel-core": "^7.0.0-bridge.0",
