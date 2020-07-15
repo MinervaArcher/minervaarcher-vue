@@ -37,11 +37,16 @@
         bugs in the site's functionality. Before long, web development became my day job.
       </p>
       <p>
+        While wonking out over CSS arcana remains my favorite aspect of web development, over the years
+        I've grown comfortable working across the stack. As I've grown in my career, I've developed a strong interest in web accessiblity; while I'm
+        by no means an expert, I'm constantly working to develop my knowledge and skills in this area.
+      </p>
+      <p>
         Like most front-end developers, I'm simultaneously inspired and appalled
         by how many new libraries, build tools, and APIs keep emerging for
-        the web. I built this site to show off a bit of what I know, and areas
-        I'm interesting in pursuing further. You can check out the code for this
-        site at
+        the web. I built this site to show off a bit of what I know, and to give myself an excuse
+        to explore techniques I don't always get to practice at work. You can check out the code for 
+        this site at
         <a
           href="https://github.com/MinervaArcher/minervaarcher-vue"
           target="_blank"
