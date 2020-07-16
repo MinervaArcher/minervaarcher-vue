@@ -288,7 +288,22 @@ module.exports = (env, argv) => ({
             template: path.resolve(__dirname, 'public/index.html'),
         }),
         new HtmlPwaPlugin({
-            name: 'Minerva Archer'
+            name: 'Minerva Archer',
+            short_name: 'Minerva',
+            themeColor: '#000000',
+            msTileColor: '#FFFFFF',
+            manifestOptions: {
+                name: 'Minerva Archer',
+                short_name: 'Minerva',
+                description: 'The personal website of Minerva Archer.',
+                developer: {
+                    name: 'Minerva Archer',
+                    url: 'https://minervaarcher.com'
+                },
+                start_url: '/index.html',
+                theme_color: '#000000',
+                background_color: '#FFFFFF',
+            }
         }),
         new PreloadPlugin({
             rel: 'preload',
