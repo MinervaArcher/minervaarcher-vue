@@ -15,7 +15,7 @@
       @keyup.esc="menuEscape"
       aria-haspopup="true"
       aria-controls="mobile-menu"
-      aria-label="menu"
+      aria-label="Toggle navigation links"
       >
       <img :src="(isMenuOpen ? closeIcon : menuIcon)" alt="" />
       </button>
@@ -24,11 +24,18 @@
     class="header__nav-mobile-wrapper"
     :class="{ 'hidden': !isMenuOpen }"
     >
+    <!-- 
+      Believe it or not, this _shouldn't_ be an ARIA menu, because menus aren't
+      meant to have interactive descendants.
+
+      See W3C spec here https://w3c.github.io/html-aria/#index-aria-menuitem
+
+      See also https://www.smashingmagazine.com/2017/11/building-accessible-menu-systems/
+     -->
       <ul
       id="mobile-menu"
       class="header__nav--mobile"
       :class="{'menu-open': isMenuOpen}"
-      role="menu"
       aria-labelled-by="mobile-menu-button"
       :aria-expanded="isMenuOpen"
       @keyup.esc="menuEscape"

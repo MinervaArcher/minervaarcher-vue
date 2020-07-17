@@ -1,13 +1,11 @@
 <template>
   <li
   class="header__menu-item"
-  role="none"
   @keyup="$emit('keyup', $event)"
   >
     <router-link
       :to="url"
       @click.native="$emit('click', $event)"
-      role="menuitem"
       >
       {{name}}
     </router-link>

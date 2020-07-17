@@ -2,10 +2,14 @@
   "name": "Minerva Archer",
   "short_name": "Minerva",
   "description": "The personal website of Minerva Archer.",
+  "developer": {
+    "name": "Minerva Archer",
+    "url": "https://minervaarcher.com"
+  },
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#4DBA87",
+  "background_color": "#FFFFFF",
+  "theme_color": "#000000",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
