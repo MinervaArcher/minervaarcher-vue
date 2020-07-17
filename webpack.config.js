@@ -88,7 +88,6 @@ module.exports = (env, argv) => ({
           minimizer: [
             new TerserPlugin({
               test: /\.js(\?.*)?$/i,
-              include: path.resolve(__dirname, "src"),
               cache: true,
               terserOptions: {
                 output: {
